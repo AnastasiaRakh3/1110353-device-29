@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Anastasiia Rakhmatova](https://up.htmlacademy.ru/htmlcss/29/user/1110353).
-* Наставник: `Неизвестно`.
+* Наставник: `[Михаил Савотиков](https://htmlacademy.ru/profile/id98316)`.
 
 ---
 
