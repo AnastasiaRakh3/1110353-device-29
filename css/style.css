@@ -1,0 +1,277 @@
+/* Fonts */
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: light;
+  src: local("Gilroy"), url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Gilroy"), url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff") format("woff");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: light;
+  src: local("Open Sans"), url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+}
+
+/* Variables */
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+
+  --basic-grey: #e5e5e5;
+  --basic-grey-dark: #dcdcdc;
+  --basic-grey-special: #ebebeb;
+  --basic-grey-special-dark: #d9d9d9;
+
+  --basic-yellow: #f7e296;
+  --basic-yellow-dark: #f0c52e;
+  --basic-yellow-decor: #ffc600;
+
+  --basic-green: #91c92f;
+  --basic-pink: #f6dada;
+
+  --basic-white: #ffffff;
+}
+
+/* Global */
+.body {
+  min-width: 1160px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 300;
+  color: var(--basic-black);
+}
+.page a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Button */
+
+.btn {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.btn:hover {
+  background-color: #f0c52e;
+}
+.btn:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f0c52e;
+}
+
+/* Header */
+.header {
+  background-color: var(--basic-yellow);
+}
+.header a {
+  color: var(--basic-black);
+}
+.header-menu {
+  list-style: none;
+}
+.header-menu-link {
+  font-size: 15px;
+  line-height: 20px;
+}
+.nav-list,
+.nav-inserted-list {
+  list-style: none;
+}
+.nav-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.nav-inserted-link {
+  line-height: 20px;
+}
+.header-logo:hover,
+.header-menu-link:hover,
+.nav a:hover {
+  opacity: 0.6;
+}
+.header-logo:active,
+.header-menu-link:active,
+.nav a:active {
+  opacity: 0.3;
+}
+
+/* Slider */
+.slide-heading {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+.slide-text {
+  line-height: 20px;
+}
+.slide-table {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  /* Почему заданная толщина текста в таблице не распространяется на ячейки? */
+}
+.slide-table th {
+  font-size: 36px;
+  line-height: 42px;
+}
+.slide-table td {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+/* Categories */
+.categories-list {
+  list-style: none;
+}
+.categories img {
+  background-color: var(--basic-yellow);
+}
+.categories-item:hover img {
+  background-color: var(--basic-yellow-dark);
+}
+.categories-item:active img {
+  background-color: var(--basic-yellow-dark);
+  /* что с непрозрачностью делать? */
+}
+
+.categories-name {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--basic-black);
+}
+.categories-item:active .categories-name {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* Service */
+.service {
+  background-color: var(--basic-grey);
+}
+.service-list {
+  list-style: none;
+}
+.service-btn:active {
+  color: var(--basic-yellow);
+  background-color: var(--basic-black);
+}
+
+.service h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+.delivery-text {
+  line-height: 30px;
+}
+
+/* Partners */
+.partners-list {
+  list-style: none;
+}
+
+/* Review */
+.review h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+.review-list {
+  list-style: none;
+}
+.review-item {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+}
+/* Contacts */
+.contacts h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+/* Footer */
+.footer {
+  color: var(--basic-white);
+  background-color: var(--basic-dark);
+}
+.footer a:not(.footer-menu-link) {
+  color: var(--basic-white);
+}
+.footer-menu {
+  list-style: none;
+}
+.footer-menu-link {
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-menu-link:hover {
+  color: var(--basic-white);
+}
+.footer-menu-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-address {
+  line-height: 20px;
+}
+.footer-nav {
+  list-style: none;
+}
+.footer-nav-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.footer-tel {
+  line-height: 20px;
+}
+.socials {
+  list-style: none;
+}
+.socials-btn {
+  font-size: 0;
+}
+.footer-logo:hover,
+.footer-nav-link:hover,
+.copyright:hover {
+  opacity: 0.6;
+}
+.footer-logo:active,
+.footer-nav-link:active,
+.copyright:active {
+  opacity: 0.3;
+}
