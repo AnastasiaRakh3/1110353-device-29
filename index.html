@@ -76,7 +76,7 @@
     <h1>Магазин Device</h1>
     <section class="slider container">
       <h2>Слайдер хитов</h2>
-      <div class="slide slide-1">
+      <div class="slide slide-active">
         <img src="https://via.placeholder.com/384x486" alt="Селфи-палка" width="384" height="486">
         <div class="slide-description">
           <h3 class="slide-heading">
@@ -89,19 +89,19 @@
           <a class="btn" href="">подробнее</a>
           <table class="slide-table">
             <tr>
-              <th>Длина палки</th>
-              <th>Вес палки</th>
-              <th>Материал</th>
+              <td class="slide-table-description">8,5 м</td>
+              <td class="slide-table-description">5 кг</td>
+              <td class="slide-table-description">Карбон</td>
             </tr>
             <tr>
-              <td>8,5 м</td>
-              <td>5 кг</td>
-              <td>Карбон</td>
+              <td class="slide-table-feature">Длина палки</td>
+              <td class="slide-table-feature">Вес палки</td>
+              <td class="slide-table-feature">Материал</td>
             </tr>
           </table>
         </div>
       </div>
-      <div class="slide slide-2">
+      <div class="slide">
         <img src="https://via.placeholder.com/384x486" alt="Умные часы" width="384" height="486">
         <div class="slide-description">
           <h3 class="slide-heading">
@@ -113,15 +113,15 @@
           <a class="btn" href="">подробнее</a>
           <table class="slide-table">
             <tr>
-              <th>Без подзарядки</th>
+              <td class="slide-table-description">48 часов</td>
             </tr>
             <tr>
-              <td>48 часов</td>
+              <td class="slide-table-feature">Без подзарядки</td>
             </tr>
           </table>
         </div>
       </div>
-      <div class="slide slide-3">
+      <div class="slide">
         <img src="https://via.placeholder.com/384x486" alt="Квадрокоптер" width="384" height="486">
         <div class="slide-description">
           <h3 class="slide-heading">
@@ -133,18 +133,18 @@
           <a class="btn" href="">подробнее</a>
           <table class="slide-table">
             <tr>
-              <th>Дальность полета</th>
-              <th>Радиус поражения</th>
+              <td class="slide-table-description">800 м</td>
+              <td class="slide-table-description">50 м</td>
             </tr>
             <tr>
-              <td>800 м</td>
-              <td>50 м</td>
+              <td class="slide-table-feature">Дальность полета</td>
+              <td class="slide-table-feature">Радиус поражения</td>
             </tr>
           </table>
         </div>
       </div>
       <div class="slider-switchers">
-        <button class="slider-switcher"></button>
+        <button class="slider-switcher slider-switcher-active"></button>
         <button class="slider-switcher"></button>
         <button class="slider-switcher"></button>
       </div>
@@ -194,34 +194,34 @@
       <h2>Сервис</h2>
       <div class="service-wrapper container">
         <ul class="service-list">
-          <li class="service-item ">
-            <a class="service-link btn service-btn" href=""> доставка</a>
+          <li class="service-item">
+            <a class="service-link btn" href=""> доставка</a>
           </li>
           <li class="service-item">
-            <a class="service-link btn service-btn" href=""> гарантия</a>
+            <a class="service-link btn" href=""> гарантия</a>
           </li>
           <li class="service-item">
-            <a class="service-link btn service-btn" href=""> кредит</a>
+            <a class="service-link btn" href=""> кредит</a>
           </li>
         </ul>
         <div class="service-description">
-          <div class="delivery">
+          <div class="service-block">
             <h3>Доставка</h3>
-            <p class="delivery-text">
+            <p class="service-text">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.
             </p>
           </div>
-          <div class="warranty">
+          <div class="service-block">
             <h3>Гарантия</h3>
-            <p class="delivery-text">
+            <p class="service-text">
               Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.
             </p>
           </div>
-          <div class="credit">
+          <div class="service-block">
             <h3>Кредит</h3>
-            <p class="delivery-text">
+            <p class="service-text">
               Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
               кредита. Выгодные для нашего банка, разумеется.
             </p>
@@ -312,13 +312,13 @@
       <div class="bottom-footer">
         <ul class="socials">
           <li class="socials-item">
-            <a class="socials-btn vkontakte-btn" href="">Фейсбук</a>
+            <a class="socials-btn socials-vkontakte" href="">Фейсбук</a>
           </li>
           <li class="socials-item">
-            <a class="socials-btn instagram-btn" href="">Инстаграм</a>
+            <a class="socials-btn socials-instagram" href="">Инстаграм</a>
           </li>
           <li class="socials-item">
-            <a class="socials-btn twitter-btn" href="">Твиттер</a>
+            <a class="socials-btn socials-twitter" href="">Твиттер</a>
           </li>
         </ul>
         <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">

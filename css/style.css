@@ -2,39 +2,48 @@
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
-  font-weight: light;
-  src: local("Gilroy"), url("../fonts/gilroylight.woff2") format("woff2"),
+  font-weight: 300;
+  src: local("Gilroy"),
+  url("../fonts/gilroylight.woff2") format("woff2"),
     url("../fonts/gilroylight.woff") format("woff");
 }
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
-  font-weight: bold;
-  src: local("Gilroy"), url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  font-weight: 800;
+  src: local("Gilroy"),
+  url("../fonts/gilroyextrabold.woff2") format("woff2"),
     url("../fonts/gilroyextrabold.woff") format("woff");
 }
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: normal;
-  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"),
+  font-weight: 400;
+  src: local("Open Sans"),
+  url("../fonts/opensans.woff2") format("woff2"),
     url("../fonts/opensans.woff") format("woff");
 }
 @font-face {
-  font-family: "Gilroy";
+  font-family: "Open Sans";
   font-style: normal;
-  font-weight: light;
-  src: local("Open Sans"), url("../fonts/opensanslight.woff2") format("woff2"),
+  font-weight: 300;
+  src: local("Open Sans"),
+  url("../fonts/opensanslight.woff2") format("woff2"),
     url("../fonts/opensanslight.woff") format("woff");
 }
 
 /* Variables */
 :root {
   --basic-black: #000000;
+  --basic-black03: rgba(0, 0, 0, 0.6);
+  --basic-black05: rgba(0, 0, 0, 0.5);
+  --basic-black03: rgba(0, 0, 0, 0.3);
+  --basic-black02: rgba(0, 0, 0, 0.2);
   --basic-dark: #363636;
 
   --basic-grey: #e5e5e5;
   --basic-grey-dark: #dcdcdc;
+  --basic-grey-darker: #a6a6a6;
   --basic-grey-special: #ebebeb;
   --basic-grey-special-dark: #d9d9d9;
 
@@ -46,6 +55,10 @@
   --basic-pink: #f6dada;
 
   --basic-white: #ffffff;
+  --basic-white07: rgba(255, 255, 255, 0.7);
+  --basic-white06: rgba(255, 255, 255, 0.6);
+  --basic-white04: rgba(255, 255, 255, 0.4);
+  --basic-white03: rgba(255, 255, 255, 0.3);
 }
 
 /* Global */
@@ -66,8 +79,8 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* Button */
 
+/* Button */
 .btn {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -80,7 +93,7 @@ img {
   background-color: #f0c52e;
 }
 .btn:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black03);
   background-color: #f0c52e;
 }
 
@@ -136,13 +149,12 @@ img {
 .slide-table {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 300;
-  /* Почему заданная толщина текста в таблице не распространяется на ячейки? */
 }
-.slide-table th {
+.slide-table-description {
   font-size: 36px;
   line-height: 42px;
 }
-.slide-table td {
+.slide-table-feature {
   font-size: 13px;
   line-height: 15px;
 }
@@ -154,14 +166,12 @@ img {
 .categories img {
   background-color: var(--basic-yellow);
 }
-.categories-item:hover img {
+.categories-link:hover img {
   background-color: var(--basic-yellow-dark);
 }
-.categories-item:active img {
+.categories-link:active img {
   background-color: var(--basic-yellow-dark);
-  /* что с непрозрачностью делать? */
 }
-
 .categories-name {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -169,9 +179,10 @@ img {
   line-height: 22px;
   color: var(--basic-black);
 }
-.categories-item:active .categories-name {
-  color: rgba(0, 0, 0, 0.3);
+.categories-link:active .categories-name {
+  color: var(--basic-black03);
 }
+
 /* Service */
 .service {
   background-color: var(--basic-grey);
@@ -179,18 +190,17 @@ img {
 .service-list {
   list-style: none;
 }
-.service-btn:active {
+.service-link:active {
   color: var(--basic-yellow);
   background-color: var(--basic-black);
 }
-
 .service h3 {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
 }
-.delivery-text {
+.service-text {
   line-height: 30px;
 }
 
@@ -215,6 +225,7 @@ img {
   font-size: 16px;
   line-height: 28px;
 }
+
 /* Contacts */
 .contacts h2 {
   font-family: "Gilroy", Arial, sans-serif;
@@ -222,6 +233,7 @@ img {
   font-size: 47px;
   line-height: 58px;
 }
+
 /* Footer */
 .footer {
   color: var(--basic-white);
@@ -235,13 +247,13 @@ img {
 }
 .footer-menu-link {
   line-height: 20px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--basic-white07);
 }
 .footer-menu-link:hover {
   color: var(--basic-white);
 }
 .footer-menu-link:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-white03);
 }
 .footer-address {
   line-height: 20px;
