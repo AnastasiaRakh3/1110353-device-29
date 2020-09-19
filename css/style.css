@@ -35,10 +35,11 @@
 /* Variables */
 :root {
   --basic-black: #000000;
-  --basic-black03: rgba(0, 0, 0, 0.6);
+  --basic-black06: rgba(0, 0, 0, 0.6);
   --basic-black05: rgba(0, 0, 0, 0.5);
   --basic-black03: rgba(0, 0, 0, 0.3);
   --basic-black02: rgba(0, 0, 0, 0.2);
+  --basic-black01: rgba(0, 0, 0, 0.1);
   --basic-dark: #363636;
 
   --basic-grey: #e5e5e5;
@@ -101,8 +102,11 @@ img {
 .header {
   background-color: var(--basic-yellow);
 }
-.header a {
-  color: var(--basic-black);
+.header-logo:hover {
+  opacity: 0.6;
+}
+.header-logo:active {
+  opacity: 0.3;
 }
 .header-menu {
   list-style: none;
@@ -110,6 +114,7 @@ img {
 .header-menu-link {
   font-size: 15px;
   line-height: 20px;
+  color: var(--basic-black);
 }
 .nav-list,
 .nav-inserted-list {
@@ -121,19 +126,19 @@ img {
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
+  color: var(--basic-black);
 }
 .nav-inserted-link {
   line-height: 20px;
+  color: var(--basic-black);
 }
-.header-logo:hover,
 .header-menu-link:hover,
 .nav a:hover {
-  opacity: 0.6;
+  color: var(--basic-black06);
 }
-.header-logo:active,
 .header-menu-link:active,
 .nav a:active {
-  opacity: 0.3;
+  color: var(--basic-black03);
 }
 
 /* Slider */
@@ -239,8 +244,13 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-dark);
 }
-.footer a:not(.footer-menu-link) {
-  color: var(--basic-white);
+.footer-logo:hover,
+.copyright:hover {
+  opacity: 0.6;
+}
+.footer-logo:active,
+.copyright:active {
+  opacity: 0.3;
 }
 .footer-menu {
   list-style: none;
@@ -267,9 +277,17 @@ img {
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
+  color: var(--basic-white);
+}
+.footer-nav-link:hover {
+  color: var(--basic-white06);
+}
+.footer-nav-link:active {
+  color: var(--basic-white03);
 }
 .footer-tel {
   line-height: 20px;
+  color: var(--basic-white);
 }
 .socials {
   list-style: none;
@@ -277,13 +295,130 @@ img {
 .socials-btn {
   font-size: 0;
 }
-.footer-logo:hover,
-.footer-nav-link:hover,
-.copyright:hover {
-  opacity: 0.6;
+
+/* Сatalog page */
+
+/* Header */
+.header-logout-link {
+  color: var(--basic-black03);
 }
-.footer-logo:active,
-.footer-nav-link:active,
-.copyright:active {
-  opacity: 0.3;
+.main h1 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  list-style: none;
+}
+.breadcrumbs-link {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black03);
+}
+.breadcrumbs-link:hover {
+  color: var(--basic-black06);
+}
+.breadcrumbs-link:active {
+  color: var(--basic-black01);
+}
+
+/* Filter */
+.filter {
+  background-color: var(--basic-grey-dark);
+}
+.filter h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/* Sorting */
+.sorting {
+  background-color: var(--basic-grey);
+}
+.sorting h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.sorting-list {
+  list-style: none;
+  font-weight: 400;
+}
+.sorting-link {
+  color: var(--basic-black03);
+}
+.sorting-link:hover {
+  color: var(--basic-black06);
+}
+.sorting-link:active {
+  color: var(--basic-black);
+}
+.sorting-link-active {
+  color: var(--basic-black);
+}
+.sorting-buttons {
+  list-style: none;
+}
+.sorting-button {
+  font-size: 0;
+}
+
+/* Products */
+.products {
+  list-style: none;
+}
+.products-name {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--basic-black);
+}
+.products-price {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* Pagination */
+.pagination {
+  list-style: none;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: var(--basic-grey-special);
+}
+.pagination-button {
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.pagination-button:hover {
+  background-color: var(--basic-grey-special-dark);
+}
+.pagination-button:active {
+  color: var(--basic-black03);
+  background-color: var(--basic-grey-special-dark);
+}
+.pagination-number {
+  color: var(--basic-black03);
+}
+.pagination-number:hover {
+  color: var(--basic-black06);
+}
+.pagination-number:active {
+  color: var(--basic-black);
+}
+.pagination-number-active {
+  color: var(--basic-black);
 }
