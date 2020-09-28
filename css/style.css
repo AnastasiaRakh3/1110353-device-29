@@ -95,6 +95,10 @@ img {
 
 /* Button */
 .btn {
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 9px;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -102,13 +106,14 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--basic-black);
+  text-align: center;
 }
 .btn:hover {
-  background-color: #f0c52e;
+  background-color: var(--basic-yellow-dark);
 }
 .btn:active {
   color: var(--basic-black03);
-  background-color: #f0c52e;
+  background-color:var(--basic-yellow-dark);
 }
 
 /* Container */
@@ -129,8 +134,14 @@ img {
   margin-top: 40px;
 }
 .header-wrapper {
-  padding: 44px 60px 50px;
+  position: relative;
+  padding: 44px 60px;
+
   background-color: var(--basic-yellow);
+}
+.header-logo {
+  position: absolute;
+  top:-20px;
 }
 .header-logo:hover {
   opacity: 0.6;
@@ -139,10 +150,34 @@ img {
   opacity: 0.3;
 }
 .header-menu {
+  display: flex;
+  flex-wrap: wrap;
+
+  position: relative;
+
   margin: 0;
   padding: 0;
+  margin-bottom: 44px;
+  padding-left: 600px;
 
   list-style: none;
+}
+.header-menu-item{
+  margin-left: 41px;
+  margin-bottom: 6px;
+  padding-left: 12px;
+}
+.header-menu-item:first-child {
+  position: absolute;
+  left: 0;
+
+  margin-left: 0;
+  padding-left: 36px;
+}
+.header-menu-item:nth-child(4n+2){
+  margin-right: auto;
+  margin-left: 0;
+
 }
 .header-menu-link {
   font-size: 15px;
@@ -155,6 +190,25 @@ img {
   padding: 0;
 
   list-style: none;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  padding-left:600px;
+}
+.nav-item {
+  margin-right:38px;
+  margin-bottom: 6px;
+}
+.nav-item:first-child {
+  position: absolute;
+  left: 0;
+}
+.nav-item:nth-child(3n+4) {
+  margin-right:0;
+  margin-left:auto;
 }
 .nav-link {
   font-family: "Gilroy", Arial, sans-serif;
@@ -200,7 +254,12 @@ img {
   line-height: 58px;
 }
 .slide-text {
+  margin-bottom: 51px;
   line-height: 20px;
+}
+.slider .btn {
+  width: 220px;
+  margin-bottom: 51px;
 }
 .slide-table {
   font-family: "Gilroy", Arial, sans-serif;
@@ -245,7 +304,13 @@ img {
   height: 160px;
   margin-bottom: 38px;
 
+  display: flex;
+
   background-color: var(--basic-yellow);
+}
+
+.categories-img-wrapper img {
+  margin: auto;
 }
 .categories-link:hover .categories-img-wrapper {
   background-color: var(--basic-yellow-dark);
@@ -275,25 +340,40 @@ img {
 }
 .service-wrapper {
   display: grid;
-  grid-template-columns: 277px 1fr;
+  grid-template-columns: 292px 1fr;
   padding: 15px 0 68px;
 }
 .service-list {
   margin: 0;
   padding: 0;
+  padding-top: 80px;
 
+  border-right: 7px solid var(--basic-black);
   list-style: none;
 }
-.service-link:active {
+.service-item {
+  margin-bottom: 21px;
+}
+.service-link {
+  width: 160px;
+}
+.service-link:active  {
   color: var(--basic-yellow);
   background-color: var(--basic-black);
 }
+/* Как можно сделать чтобы при нажатии на ссылку, именно фон у service-item становился черным? */
+.service-description {
+  padding:71px 184px 10px 116px;
+}
 .service h3 {
+  margin: 0;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 0.2em;
+
 }
 .service-text {
   line-height: 30px;
@@ -305,14 +385,20 @@ img {
   margin-bottom: 90px;
 }
 .partners-list {
-  display: grid;
-  grid-template-columns: repeat(4, 260px);
-  column-gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+.partners-item {
+ margin-right: 40px;
+}
+.partners-item:nth-child(4){
+margin-right:0;
 }
 
 /* Index Columns */
@@ -330,27 +416,41 @@ img {
   line-height: 58px;
   letter-spacing: 0.2em;
 }
+.index-columns .btn {
+  width: 260px;
+}
 
 /* Review */
 .review {
   width: 473px;
   padding-top: 57px;
+  padding-bottom: 86px;
 }
 .review-text {
+  margin-top: 0;
   margin-bottom: 40px;
 }
+.review-text:nth-of-type(2) {
+  margin-bottom: 60px;
+}
 .review-list {
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0;
+  margin-top: 20px;
+  margin-bottom: 75px;
 
   list-style: none;
 }
 .review-item {
+  padding-left: 24px;
+  margin-bottom: 20px;
+
   font-family: "Gilroy", Arial, sans-serif;
+  font-style: normal;
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
+
 }
 
 /* Contacts */
@@ -359,12 +459,27 @@ img {
   margin-left: 20px;
   padding-top: 57px;
 }
+.contacts-text {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.contacts-map {
+  display: block;
+  margin-bottom: 76px;
+}
 /* Footer */
 .footer {
-  padding: 46px 0 64px;
-  
   color: var(--basic-white);
   background-color: var(--basic-dark);
+}
+.footer-wrapper {
+  padding-top: 46px;
+  padding-bottom: 64px;
+}
+.up-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 .footer-logo:hover,
 .copyright:hover {
@@ -375,10 +490,15 @@ img {
   opacity: 0.3;
 }
 .footer-menu {
+  display: flex;
+  justify-content: end;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+.footer-menu-item {
+  margin-left: 40px;
 }
 .footer-menu-link {
   line-height: 20px;
@@ -390,14 +510,29 @@ img {
 .footer-menu-link:active {
   color: var(--basic-white03);
 }
+.middle-footer {
+  /* Не уверена, что данный способ правильный, чтобы центральные элементы шли по центру экрана */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 67px;
+}
 .footer-address {
   line-height: 20px;
 }
 .footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+.footer-nav-item:not(:last-child) {
+  margin-right: 36px;
 }
 .footer-nav-link {
   font-family: "Gilroy", Arial, sans-serif;
@@ -418,9 +553,28 @@ img {
   line-height: 20px;
   color: var(--basic-white);
 }
+.bottom-footer {
+  /* Не уверена, что данный способ правильный, чтобы центральные элементы шли по центру экрана */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-footer::before {
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: var(--basic-yellow-decor);
+}
 .socials {
+  display: flex;
+  width: 136px;
+  margin: 0;
+  padding: 0;
+
+  background-color: burlywood;
   list-style: none;
 }
+
 .socials-btn {
   font-size: 0;
 }
