@@ -95,14 +95,14 @@ img {
 
 /* Button */
 .btn {
-  display: block;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  display: inline-block;
+  height: 40px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 22px;
+  /* line-height: 22px; */
+  line-height: 40px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--basic-black);
@@ -134,14 +134,13 @@ img {
   margin-top: 40px;
 }
 .header-wrapper {
-  position: relative;
-  padding: 44px 60px;
-
+  padding: 20px 60px 44px;
   background-color: var(--basic-yellow);
 }
 .header-logo {
-  position: absolute;
-  top:-20px;
+  display: block;
+  margin-top:-40px;
+  margin-bottom: 29px;
 }
 .header-logo:hover {
   opacity: 0.6;
@@ -149,35 +148,31 @@ img {
 .header-logo:active {
   opacity: 0.3;
 }
-.header-menu {
+.header-middle {
   display: flex;
-  flex-wrap: wrap;
-
-  position: relative;
-
+  margin-bottom: 44px;
+}
+.header-search {
+  width: 50%;
+}
+.header-menu {
+  width: 50%;
   margin: 0;
   padding: 0;
-  margin-bottom: 44px;
-  padding-left: 600px;
+
+  display: flex;
+  flex-wrap: wrap;
 
   list-style: none;
 }
 .header-menu-item{
-  margin-left: 41px;
-  margin-bottom: 6px;
-  padding-left: 12px;
+ margin-left: 41px;
+ padding-left: 26px;
 }
 .header-menu-item:first-child {
-  position: absolute;
-  left: 0;
-
-  margin-left: 0;
-  padding-left: 36px;
-}
-.header-menu-item:nth-child(4n+2){
   margin-right: auto;
-  margin-left: 0;
-
+  margin-left: 20px;
+  padding-left: 21px;
 }
 .header-menu-link {
   font-size: 15px;
@@ -194,19 +189,16 @@ img {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
-
-  padding-left:600px;
 }
 .nav-item {
   margin-right:38px;
   margin-bottom: 6px;
 }
 .nav-item:first-child {
-  position: absolute;
-  left: 0;
+ padding-right: 35px;
+ margin-right: 314px;
 }
-.nav-item:nth-child(3n+4) {
+.nav-item:nth-child(4) {
   margin-right:0;
   margin-left:auto;
 }
@@ -345,8 +337,8 @@ img {
 }
 .service-list {
   margin: 0;
-  padding: 0;
   padding-top: 80px;
+  padding-left: 0;
 
   border-right: 7px solid var(--basic-black);
   list-style: none;
@@ -355,13 +347,25 @@ img {
   margin-bottom: 21px;
 }
 .service-link {
-  width: 160px;
+  width:160px;
+  position: relative;
 }
 .service-link:active  {
   color: var(--basic-yellow);
   background-color: var(--basic-black);
 }
-/* Как можно сделать чтобы при нажатии на ссылку, именно фон у service-item становился черным? */
+.service-link::after {
+  content: "";
+  width: 125px;
+  height: 40px;
+
+  position: absolute;
+  top: 0;
+  left: 160px;
+}
+.service-link:active.service-link::after {
+  background-color: var(--basic-black);
+}
 .service-description {
   padding:71px 184px 10px 116px;
 }
@@ -397,7 +401,7 @@ img {
 .partners-item {
  margin-right: 40px;
 }
-.partners-item:nth-child(4){
+.partners-item:nth-child(4n){
 margin-right:0;
 }
 
@@ -434,10 +438,9 @@ margin-right:0;
   margin-bottom: 60px;
 }
 .review-list {
-  margin: 0;
-  padding: 0;
   margin-top: 20px;
   margin-bottom: 75px;
+  padding: 0;
 
   list-style: none;
 }
@@ -479,7 +482,8 @@ margin-right:0;
 .up-footer {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+
+  margin-bottom: 30px;
 }
 .footer-logo:hover,
 .copyright:hover {
@@ -492,6 +496,7 @@ margin-right:0;
 .footer-menu {
   display: flex;
   justify-content: end;
+
   margin: 0;
   padding: 0;
 
@@ -511,28 +516,32 @@ margin-right:0;
   color: var(--basic-white03);
 }
 .middle-footer {
-  /* Не уверена, что данный способ правильный, чтобы центральные элементы шли по центру экрана */
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 67px;
+  margin-bottom: 57px;
 }
 .footer-address {
+  width: 328px;
+  padding-right: 20px;
+
   line-height: 20px;
 }
 .footer-nav {
+  width: 463px;
+
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 
   margin: 0;
-  padding: 0;
+  padding:0;
 
   list-style: none;
 }
-.footer-nav-item:not(:last-child) {
-  margin-right: 36px;
+.footer-nav-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .footer-nav-link {
   font-family: "Gilroy", Arial, sans-serif;
@@ -550,31 +559,52 @@ margin-right:0;
   color: var(--basic-white03);
 }
 .footer-tel {
+  width: 329px;
+  padding-left: 20px;
+
   line-height: 20px;
+  text-align: end;
   color: var(--basic-white);
 }
 .bottom-footer {
-  /* Не уверена, что данный способ правильный, чтобы центральные элементы шли по центру экрана */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  position: relative;
 }
 .bottom-footer::before {
   content: "";
   width: 80px;
   height: 7px;
+
+  position: absolute;
+  left: 0;
   background-color: var(--basic-yellow-decor);
 }
 .socials {
   display: flex;
-  width: 136px;
+  justify-content: center;
+  width: 463px;
+
   margin: 0;
   padding: 0;
+  margin-left: 348px;
+  margin-right: auto;
 
   background-color: burlywood;
   list-style: none;
 }
+.socials-item {
+  width: 32px;
+  height: 32px;
 
+  margin-right: 20px;
+
+  background-color: brown;
+}
+.socials-item:last-child {
+  margin-right: 0;
+}
 .socials-btn {
   font-size: 0;
 }
