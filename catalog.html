@@ -44,7 +44,7 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link" href="">каталог товаров</a>
+              <a class="nav-link nav-link-catalog" href="">каталог товаров</a>
               <ul class="nav-inserted-list">
                 <li class="nav-inserted-item">
                   <a class="nav-inserted-link" href="">Виртуальная реальность</a>
@@ -92,7 +92,7 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="">Каталог товаров</a>
             </li>
-            <li class="breadcrumbs-item">
+            <li class="breadcrumbs-item breadcrumbs-current">
               <a class="breadcrumbs-link">Моноподы для селфи</a>
             </li>
           </ul>
@@ -127,22 +127,28 @@
             </ul>
             <ul class="sorting-buttons">
               <li class="sorting-button">
-                <a class="sorting-button-ascend" href="">По возрастанию</a>
+                <a class="sorting-button-link sorting-button-ascend" href="">По возрастанию</a>
               </li>
               <li class="sorting-button">
-                <a class="sorting-button-descend" href="">По убыванию</a>
+                <a class="sorting-button-link sorting-button-link-active  sorting-button-descend" href="">По убыванию</a>
               </li>
             </ul>
           </div>
           <div class="catalog-main">
             <ul class="products">
+
               <li class="products-card">
                 <img src="img/item-1.jpg" alt="Селфи-палка" width="360" height="380">
                 <div class="products-text">
                   <a class="products-name" href="">Любительская селфи-палка</a>
                   <span class="products-price">500 руб.</span>
                 </div>
+                <div class="products-card-hover">
+                  <a class="btn card-hover-btn" href="">В корзину</a>
+                  <a class="card-hover-text" href="">Добавить к сравнению</a>
+                </div>
               </li>
+
               <li class="products-card">
                 <img src="img/item-2.jpg" alt="Селфи-палка" width="360" height="380">
                 <div class="products-text">
@@ -151,15 +157,25 @@
                   </a>
                   <span class="products-price">1 500 руб.</span>
                 </div>
+                <div class="products-card-hover">
+                  <a class="btn card-hover-btn" href="">В корзину</a>
+                  <a class="card-hover-text" href="">Добавить к сравнению</a>
+                </div>
               </li>
+
               <li class="products-card">
                 <img src="img/item-3.jpg" alt="Селфи-палка" width="360" height="380">
                 <div class="products-text">
                   <a class="products-name" href="">Непотопляемая селфи-палка</a>
                   <span class="products-price">2 500 руб.</span>
                 </div>
+                <div class="products-card-hover">
+                  <a class="btn card-hover-btn" href="">В корзину</a>
+                  <a class="card-hover-text" href="">Добавить к сравнению</a>
+                </div>
               </li>
-              <li class="products-card">
+
+              <li class="products-card products-card-new">
                 <img src="img/item-4.jpg" alt="Селфи-палка" width="360" height="380">
                 <div class="products-text">
                   <a class="products-name" href="">
@@ -167,14 +183,19 @@
                   </a>
                   <span class="products-price">4 900 руб.</span>
                 </div>
+                <div class="products-card-hover">
+                  <a class="btn card-hover-btn" href="">В корзину</a>
+                  <a class="card-hover-text" href="">Добавить к сравнению</a>
+                </div>
               </li>
+
             </ul>
             <ul class="pagination">
               <li class="pagination-item">
                 <a class="pagination-button pagination-button-back" href="">назад</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-number pagination-number-active" href="">1</a>
+                <a class="pagination-number pagination-number-current" href="">1</a>
                 <a class="pagination-number" href="">2</a>
                 <a class="pagination-number" href="">3</a>
               </li>
@@ -195,7 +216,7 @@
         </a>
         <ul class="footer-menu">
           <li class="footer-menu-item">
-            <a class="footer-menu-link footer-user-link" href="">Валентин Петухов</a>
+            <a class="footer-menu-link footer-user-link footer-user-link2" href="">Валентин Петухов</a>
             <a class="footer-menu-link footer-logout-link" href="">Выйти</a>
           </li>
           <li class="footer-menu-item">
@@ -224,7 +245,7 @@
       <div class="bottom-footer">
         <ul class="socials">
           <li class="socials-item">
-            <a class="socials-btn socials-vkontakte" href="">Фейсбук</a>
+            <a class="socials-btn socials-facebook" href="">Фейсбук</a>
           </li>
           <li class="socials-item">
             <a class="socials-btn socials-instagram" href="">Инстаграм</a>
