@@ -17,7 +17,7 @@
         </a>
         <div class="header-middle">
             <form class="header-search" action="#" method="POST">
-              <input type="text">
+              <input type="search">
               <!-- <label class="hidden" for="search-input">Поиск по сайту</label>
                         <input
                             type="search"
@@ -41,7 +41,7 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link" href="">каталог товаров</a>
+              <a class="nav-link nav-link-catalog" href="">каталог товаров</a>
               <ul class="nav-inserted-list">
                 <li class="nav-inserted-item">
                   <a class="nav-inserted-link" href="">Виртуальная реальность</a>
@@ -82,8 +82,11 @@
     <section class="slider">
       <h2 class="visually-hidden">Слайдер хитов</h2>
       <div class="container">
-        <div class="slide slide-active">
+        <ul class="slider-list">
+        <li class="slide slide-current">
+          <div class="slide-img">
           <img src="img/slider-1.png" alt="3 селфи-палки" width="384" height="486">
+         </div>
           <div class="slide-description">
             <h3 class="slide-heading">
               Делай селфи,
@@ -109,9 +112,11 @@
               </tr>
             </table>
           </div>
-        </div>
-        <div class="slide">
+        </li>
+        <li class="slide">
+          <div class="slide-img">
           <img src="img/slider-2.png" alt="Умные часы" width="345" height="485">
+         </div>
           <div class="slide-description">
             <h3 class="slide-heading">
               Худеем
@@ -133,9 +138,11 @@
               </tr>
             </table>
           </div>
-        </div>
-        <div class="slide">
+        </li>
+        <li class="slide">
+          <div class="slide-img">
           <img src="img/slider-3.png" alt="Квадрокоптер" width="526" height="334">
+        </div>
           <div class="slide-description">
             <h3 class="slide-heading">
               Порхает как бабочка, жалит как пчела!
@@ -157,11 +164,12 @@
               </tr>
             </table>
           </div>
-        </div>
-        <div class="slider-switchers">
-          <button class="slider-switcher slider-switcher-active"></button>
-          <button class="slider-switcher"></button>
-          <button class="slider-switcher"></button>
+        </li>
+      </ul>
+        <div class="slider-controls">
+          <button type="button" class="slider-control slider-control-active" aria-label="Первый слайд"></button>
+          <button class="slider-control" aria-label="Второй слайд"></button>
+          <button class="slider-control" aria-label="Третий слайд"></button>
         </div>
       </div>
     </section>
@@ -228,7 +236,7 @@
         <div class="service-wrapper">
           <ul class="service-list">
             <li class="service-item">
-              <a class="service-link btn" href=""> доставка</a>
+              <a class="service-link btn service-link-active" href=""> доставка</a>
             </li>
             <li class="service-item">
               <a class="service-link btn" href=""> гарантия</a>
@@ -237,32 +245,32 @@
               <a class="service-link btn" href=""> кредит</a>
             </li>
           </ul>
-          <div class="service-description">
-            <div class="service-block service-delivery service-block-active">
+          <ul class="service-description">
+            <li class="service-block service-block-current">
               <h3>Доставка</h3>
               <p class="service-text">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду
                 совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
                 на ваш этаж.
               </p>
-            </div>
-            <div class="service-block service-warranty">
+            </li>
+            <li class="service-block">
               <h3>Гарантия</h3>
               <p class="service-text">
                 Если из-за возгорания купленного у нас товара у вас сгорит дом
                 — не переживайте, мы выдадим вам новый. Товар, не дом, конечно
                 же.
               </p>
-            </div>
-            <div class="service-block service-credit">
+            </li>
+            <li class="service-block">
               <h3>Кредит</h3>
               <p class="service-text">
                 Залезть в долговую яму стало проще! Кредитные консультанты
                 подберут для вас наиболее выгодные условия кредита. Выгодные
                 для нашего банка, разумеется.
               </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -362,7 +370,7 @@
         <div class="bottom-footer">
           <ul class="socials">
             <li class="socials-item">
-              <a class="socials-btn socials-vkontakte" href="">Фейсбук</a>
+              <a class="socials-btn socials-facebook" href="">Фейсбук</a>
             </li>
             <li class="socials-item">
               <a class="socials-btn socials-instagram" href="">Инстаграм</a>
