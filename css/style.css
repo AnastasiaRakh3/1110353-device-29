@@ -1193,19 +1193,21 @@ margin-right:0;
   width: 200px;
   margin-top: 170px;
   margin-bottom: 14px;
+
+  opacity: 1;
 }
 .card-hover-text {
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 0.1em;
   color: var(--basic-black05);
+  opacity: 1;
 }
 .card-hover-text:hover {
   color: var(--basic-black);
 }
 .card-hover-text:active {
   color: var(--basic-black02);
-
 }
 .products-card-new {
   position: relative;
@@ -1279,7 +1281,6 @@ margin-right:0;
   font-size: 16px;
   line-height: 70px;
   color: var(--basic-black03);
-  background-color: khaki;
 }
 .pagination-number:hover {
   color: var(--basic-black06);
