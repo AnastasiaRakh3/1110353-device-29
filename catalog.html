@@ -16,16 +16,15 @@
           <img src="img/header-logo.svg" alt="Логотип магазина Device" width="163" height="35">
         </a>
       <div class="header-middle">
-            <form class="header-search" action="#" method="POST">
-           <input type="text">
-              <!-- <label class="hidden" for="search-input">Поиск по сайту</label>
-                            <input
-                                type="search"
-                                name="search-input"
-                                placeholder="Поиск по сайту"
-                                id="search-input"
-                            > -->
-            </form>
+        <form class="header-search" action="#" method="get">
+          <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+                    <input
+                        type="search"
+                        name="search"
+                        placeholder="Поиск по сайту"
+                        id="search-field"
+                    >
+        </form>
          <ul class="header-menu">
           <li class="header-menu-item">
             <a class="header-menu-link header-user-link" href="">
@@ -105,9 +104,64 @@
           <div class="catalog-header catalog-header-left">
             <h2>фильтр:</h2>
           </div>
-          <form class="filter" action="https://echo.htmlacademy.ru/" method="POST">
-            <button class="btn" type="submit"></button>
-          </form>
+          <form class="filter" action="..." method="post">
+
+            <div class="filter-item">
+              <legend>Стоимость</legend>
+              <div class="range-filter">
+
+              <div class="range-controls">
+
+                <div class="scale">
+                  <div class="bar" style="width:30%;margin-left:20%"></div>
+                </div>
+
+                <div class="toggle toggle-min" style="left:20%;"></div>
+                <div class="toggle toggle-max" style="left:50%"></div>
+              </div>
+
+              <div class="price-controls">
+                <label class="min-price" for="min-field">от
+                <input type="number" name="min-price" id="min-field" value="0" tabindex="0"></label>
+
+                <label class="max-price" for="max-field">до
+                <input type="number" name="max-price" id="max-field" value="1500" tabindex="0"></label>
+              </div>
+
+            </div>
+            </div>
+
+            <div class="filter-item filter-color">
+              <legend>Цвет</legend>
+
+
+            <label for="black-color"> <input type="checkbox" name="black-color" value="Чёрный" id="color-field" checked>Чёрный</label>
+
+
+            <label for="white-color"><input type="checkbox" name="white-color" value="Белый" id="color-field">Белый</label>
+
+
+            <label for="blue-color"><input type="checkbox" name="blue-color" value="Синий" id="color-field" checked>Синий</label>
+
+
+            <label for="red-color"><input type="checkbox" name="red-color" value="Красный" id="color-field" checked>Красный</label>
+
+
+            <label for="pink-color"> <input type="checkbox" name="pink-color" value="Розовый" id="color-field">Розовый</label>
+
+            </div>
+
+            <div class="filter-item filter-bluetooth">
+              <legend>Bluetooth</legend>
+
+             <label for="bluetooth-yes-field"> <input type="radio" name="bluetooth" value="Есть" id="bluetooth-yes-field" checked>Есть</label>
+
+             <label for="bluetooth-no-field"><input type="radio" name="bluetooth" value="Нет" id="bluetooth-no-field">Нет</label>
+            </div>
+
+             <input class="btn filter-btn" type="submit" value="Показать">
+
+           </form>
         </div>
         <div class="catalog-right-column">
           <div class="catalog-header catalog-header-right">
@@ -196,7 +250,11 @@
               </li>
               <li class="pagination-item">
                 <a class="pagination-number pagination-number-current" href="">1</a>
+              </li>
+              <li class="pagination-item">
                 <a class="pagination-number" href="">2</a>
+              </li>
+              <li class="pagination-item">
                 <a class="pagination-number" href="">3</a>
               </li>
               <li class="pagination-item">
@@ -261,5 +319,4 @@
     </div>
   </footer>
 </body>
-
 </html>
