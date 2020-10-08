@@ -70,6 +70,9 @@
 }
 
 /* Global */
+.page {
+  overflow-x: hidden
+}
 .body {
   min-width: 1160px;
   margin: 0;
@@ -158,7 +161,7 @@ img {
 .header-logo {
   display: block;
   margin-top:-40px;
-  margin-bottom: 29px;
+  margin-bottom: 16px;
 }
 .header-logo:hover {
   opacity: 0.6;
@@ -168,41 +171,82 @@ img {
 }
 .header-middle {
   display: flex;
+  align-items: center;
   margin-bottom: 44px;
 
   line-height: 20px;
 }
 .header-search {
-  width: 600px;
+  display: flex;
+  width: 440px;
+  margin-right: 100px;
+
   position: relative;
+  background-color: lightcoral;
 }
 .header-search::before {
   content: "";
   width: 16px;
   height: 16px;
-
   position: absolute;
-  top:3px;
   left: 0;
+  top: 19px;
 
   background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-.header-search input {
-  margin-left: 38px;
+.search-field {
+  flex-grow: 1;
+  padding-left: 36px;
 
   font-family: inherit;
   font-size: inherit;
-  line-height: 20px;
+  /* line-height: 20px; */
+  line-height: 48px;
   font-weight: inherit;
   color: inherit;
 
   background-color: inherit;
-  border: none;
+  background-color: lightgreen;
+  border:2px solid transparent ;
+  outline: none;
 }
-.header-search input:hover {
+.search-field:focus {
+  border-bottom: 2px solid var(--basic-black);
+}
+.search-field::placeholder {
+  color: var(--basic-black03);
+}
+.search-field:hover::placeholder {
   color: var(--basic-black06);
+}
+.search-btn {
+  display: none;
+  padding: 0 17px;
+  margin: 0;
+  margin-bottom: -2px;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 46px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--basic-black);
+
+  background-color: transparent;
+  border: 2px solid var(--basic-black);
+}
+.search-field:focus+.search-btn {
+  display: block;
+}
+.search-field:focus+.search-btn:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+.search-field:focus+.search-btn:active {
+  color: var(--basic-white03);
+  background-color: var(--basic-black);
 }
 .header-menu {
   width: 580px;
@@ -305,6 +349,7 @@ img {
   background-image: url("../img/icon-plus.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
 }
 .nav-inserted-list {
   display: none;
@@ -349,13 +394,18 @@ img {
   color: var(--basic-black);
 }
 .header-menu-link:hover,
-.header-menu-link:hover::before,
 .nav a:hover{
   opacity: 0.6;
+}
+.header-menu-link:hover::before {
+  opacity: 0.3;
 }
 .header-menu-link:active,
 .header-menu-link:active::before,
 .nav a:active {
+  opacity: 0.3;
+}
+.header-menu-link:hover::before {
   opacity: 0.3;
 }
 
@@ -975,6 +1025,9 @@ margin-right:0;
   bottom: auto;
   margin: auto;
 
+  /* top:50%;
+  margin-top: -50%; */
+
   background-color: var(--basic-white);
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
@@ -986,11 +1039,19 @@ margin-right:0;
   width: 55px;
   height: 55px;
 
-  background-color: var(--basic-yellow);
+  background-color: var(--basic-yellow-dark);
   opacity: 0.5;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+.modal-close:hover {
+  background-color: var(--basic-yellow-dark);
+  opacity: 1;
+}
+.modal-close:active {
+  background-color: var(--basic-yellow-dark);
+  opacity: 0.3;
 }
 .modal-close::before,
 .modal-close::after {
@@ -1048,9 +1109,16 @@ margin-right:0;
   font-weight: normal;
   font-size: 14px;
   line-height: 19px;
+  color: inherit;
 
   background-color: var(--basic-grey-input);
   border: none;
+}
+.modal-letter input::placeholder,
+.modal-letter textarea::placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black04);
 }
 .modal-letter textarea {
   height: 167px;
@@ -1075,15 +1143,17 @@ margin-right:0;
 .modal-letter .btn:active {
   color: var(--basic-black03);
   background-color:var(--basic-yellow-dark);
-  border: none;
 }
 .modal-map {
   z-index: 2;
 
   display: none;
   width: 960px;
+  height: 546px;
 }
-
+.modal-map iframe {
+  border: none;
+}
 
 /* Сatalog page */
 
@@ -1237,6 +1307,7 @@ margin-right:0;
   border: none;
 
   border-top: 2px solid var(--basic-black);
+  background-color: lightcoral;
 }
 .filter-item:last-child {
   margin-bottom: 41px;
@@ -1260,7 +1331,6 @@ margin-right:0;
   background-color: var(--basic-black02);
 }
 .bar {
-  /* width: 94px; */
   height: 2px;
   background-color: var(--basic-green);
 }
@@ -1307,20 +1377,89 @@ margin-right:0;
 .price-controls input:first-child{
   margin-right: 17px;
 }
+
+/* Filter-color */
  .filter-color label,.filter-bluetooth label  {
    display: block;
    margin-bottom: 20px;
    padding-left: 42px;
 
+   position: relative;
+
    font-size: 14px;
    line-height: 19px;
  }
- .filter-color input,.filter-bluetooth input {
-   display: none;
+ .filter-color input:disabled + label,
+ .filter-bluetooth input:disabled + label
+ {
+  color: var(--basic-grey-darker);
  }
+ .filter-color label::before,
+ .filter-bluetooth label::before
+ {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  left: 0;
 
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.filter-color label::before {
+  background-image: url('../img/checkbox.svg');
+}
+.filter-color input:checked + label::after,
+.filter-bluetooth input:checked + label::after
+{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.filter-color input:checked + label::after {
+  left: 5px;
+
+  width: 14px;
+  height: 11px;
+
+  background-image: url('../img/checkbox-yes.svg');
+}
+.filter-color input:disabled + label::before,
+.filter-color input:disabled + label::after,
+.filter-bluetooth input:disabled + label::before,
+.filter-bluetooth input:disabled + label::after
+ {
+  opacity: 0.25;
+}
+.filter-color label:hover::before,
+.filter-color label:hover::after{
+  opacity: 0.6;
+}
+
+/* Filter-bluetooth */
 .filter-bluetooth label {
   margin-bottom: 21px;
+}
+.filter-bluetooth label::before {
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.filter-bluetooth input:checked + label::after {
+  left: 8px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: var(--basic-black);
+  border-radius: 50%;
 }
 .filter-btn {
   width: 100%;

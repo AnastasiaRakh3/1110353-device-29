@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -18,16 +19,17 @@
       <div class="header-middle">
         <form class="header-search" action="#" method="get">
           <label class="visually-hidden" for="search-field">Поиск по сайту</label>
-                    <input
+                    <input class="search-field"
                         type="search"
                         name="search"
                         placeholder="Поиск по сайту"
                         id="search-field"
                     >
+              <input class="search-btn" type="submit" value="Найти">
         </form>
          <ul class="header-menu">
           <li class="header-menu-item">
-            <a class="header-menu-link header-user-link" href="">
+            <a class="header-menu-link header-user-link" href="https://htmlacademy.ru/profile/id1110353">
               Валентин Петухов
             </a>
             <a class="header-menu-link header-logout-link" href="">Выйти</a>
@@ -104,7 +106,7 @@
           <div class="catalog-header catalog-header-left">
             <h2>фильтр:</h2>
           </div>
-          <form class="filter" action="..." method="post">
+          <form class="filter" action="https://echo.htmlacademy.ru/" method="post">
 
             <div class="filter-item">
               <legend>Стоимость</legend>
@@ -131,32 +133,34 @@
             </div>
             </div>
 
-            <div class="filter-item filter-color">
+            <fieldset class="filter-item filter-color">
               <legend>Цвет</legend>
 
+              <input class="visually-hidden" type="checkbox" name="black-color" value="Чёрный" id="black-color" checked>
+            <label for="black-color">Чёрный</label>
 
-            <label for="black-color"> <input type="checkbox" name="black-color" value="Чёрный" id="color-field" checked>Чёрный</label>
+            <input class="visually-hidden"  type="checkbox" name="white-color" value="Белый" id="white-color">
+            <label for="white-color">Белый</label>
 
+            <input class="visually-hidden"  type="checkbox" name="blue-color" value="Синий" id="blue-color" checked>
+            <label for="blue-color">Синий</label>
 
-            <label for="white-color"><input type="checkbox" name="white-color" value="Белый" id="color-field">Белый</label>
+            <input class="visually-hidden"  type="checkbox" name="red-color" value="Красный" id="red-color" checked>
+            <label for="red-color">Красный</label>
 
+            <input class="visually-hidden"  type="checkbox" name="pink-color" value="Розовый" id="pink-color">
+            <label for="pink-color">Розовый</label>
 
-            <label for="blue-color"><input type="checkbox" name="blue-color" value="Синий" id="color-field" checked>Синий</label>
-
-
-            <label for="red-color"><input type="checkbox" name="red-color" value="Красный" id="color-field" checked>Красный</label>
-
-
-            <label for="pink-color"> <input type="checkbox" name="pink-color" value="Розовый" id="color-field">Розовый</label>
-
-            </div>
+            </fieldset>>
 
             <div class="filter-item filter-bluetooth">
               <legend>Bluetooth</legend>
 
-             <label for="bluetooth-yes-field"> <input type="radio" name="bluetooth" value="Есть" id="bluetooth-yes-field" checked>Есть</label>
+              <input class="visually-hidden" type="radio" name="bluetooth" value="Есть" id="bluetooth-yes-field" >
+             <label for="bluetooth-yes-field">Есть</label>
 
-             <label for="bluetooth-no-field"><input type="radio" name="bluetooth" value="Нет" id="bluetooth-no-field">Нет</label>
+             <input class="visually-hidden" type="radio" name="bluetooth" value="Нет" id="bluetooth-no-field">
+             <label for="bluetooth-no-field">Нет</label>
             </div>
 
              <input class="btn filter-btn" type="submit" value="Показать">
