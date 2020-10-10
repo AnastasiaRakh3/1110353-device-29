@@ -1321,15 +1321,13 @@ img {
   margin-bottom: 37px;
   padding: 0;
   padding-top: 14px;
-  border: none;
 
   border-top: 2px solid var(--basic-black);
-  background-color: lightcoral;
 }
 .filter-item:last-child {
   margin-bottom: 41px;
 }
-.filter-item legend {
+.filter-item h3 {
   margin-bottom: 30px;
 
   font-family: "Gilroy", Arial, sans-serif;
@@ -1366,7 +1364,7 @@ img {
   filter: drop-shadow(0 2px 2px var(--basic-black018));
   cursor: pointer;
 }
-/* .toggle-mix {
+/* .toggle-min {
   left:10px;
 }
 .toggle-max {
@@ -1424,7 +1422,6 @@ img {
 
   background-repeat: no-repeat;
   background-position: 0 0;
-
 }
 .filter-color label::before {
   background-image: url("../img/checkbox.svg");
