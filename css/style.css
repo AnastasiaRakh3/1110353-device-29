@@ -244,20 +244,21 @@ img {
   background-color: transparent;
   border: 2px solid var(--basic-black);
 }
-.search-field:focus + .search-btn {
+/* .search-field:focus + .search-btn {
+  display: block;
+} */
+.header-search:focus-within .search-btn {
   display: block;
 }
 .search-btn:hover {
-  display: block;
+  /* display: block; */
   color: var(--basic-white);
   background-color: var(--basic-black);
   border: 2px solid var(--basic-black);
-  outline: 0;
 }
 .search-btn:active {
   color: var(--basic-white03);
   background-color: var(--basic-black);
-  outline: 0;
 }
 .header-menu {
   width: 580px;
@@ -1650,6 +1651,7 @@ img {
   margin-bottom: 14px;
 
   opacity: 1;
+  border: none;
 }
 .card-hover-text {
   font-size: 13px;
@@ -1657,6 +1659,8 @@ img {
   letter-spacing: 0.1em;
   color: var(--basic-black05);
   opacity: 1;
+  border: none;
+  background-color: transparent;
 }
 .card-hover-text:hover {
   color: var(--basic-black);
@@ -1730,7 +1734,6 @@ img {
   padding-left: 17px;
 
   /* line-height: 70px; */
-  color: var(--basic-black03);
 }
 .pagination-number:hover {
   color: var(--basic-black06);
