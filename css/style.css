@@ -379,7 +379,7 @@ img {
 }
 .nav-link-catalog:hover + .nav-inserted-list,
 .nav-inserted-list:hover,
-.nav-link-catalog:focus-within + .nav-inserted-list{
+.nav-item:first-child:focus-within .nav-inserted-list {
   display: grid;
 }
 .nav-inserted-item:first-child {
