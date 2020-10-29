@@ -84,6 +84,7 @@
 
   <main class="main">
     <h1 class="visually-hidden">Магазин Device</h1>
+
     <section class="slider">
       <h2 class="visually-hidden">Слайдер хитов</h2>
       <div class="container">
@@ -178,6 +179,7 @@
         </div>
       </div>
     </section>
+
     <section class="categories">
       <h2 class="visually-hidden">Категории товаров</h2>
       <div class="container">
@@ -196,7 +198,7 @@
                 <div class="categories-img-wrapper">
                   <img src="img/popular-2.svg" alt="" width="86" height="117">
                 </div>
-                <p class="categories-name">Моноподы для селфи</p>
+                <p class="categories-name">Моноподы <br> для селфи</p>
               </a>
             </li>
             <li class="categories-item">
@@ -254,21 +256,20 @@
             <li class="service-block service-block-current">
               <h3>Доставка</h3>
               <p class="service-text">
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-                заработаем, поднимая его на ваш этаж.
+                Мы с удовольствием доставим ваш товар прямо к вашему <br> подъезду совершенно бесплатно! Ведь мы неплохо <br> заработаем, поднимая его на ваш этаж.
               </p>
             </li>
             <li class="service-block">
               <h3>Гарантия</h3>
               <p class="service-text">
-                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br>
                 Товар, не дом, конечно же.
               </p>
             </li>
             <li class="service-block">
               <h3>Кредит</h3>
               <p class="service-text">
-                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
+                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные <br> условия
                 кредита. Выгодные для нашего банка, разумеется.
               </p>
             </li>
@@ -281,22 +282,22 @@
       <div class="container">
         <ul class="partners-list">
           <li class="partners-item">
-            <a href="">
+            <a class="partners-link" href="">
               <img src="img/partner-1.png" alt="Логотип DJI" width="260" height="100">
             </a>
           </li>
           <li class="partners-item">
-            <a href="">
+            <a class="partners-link" href="">
               <img src="img/partner-2.png" alt="Логотип SP.GADGETS" width="260" height="100">
             </a>
           </li>
           <li class="partners-item">
-            <a href="">
+            <a class="partners-link" href="">
               <img src="img/partner-3.png" alt="Логотип GOPRO" width="260" height="100">
             </a>
           </li>
           <li class="partners-item">
-            <a href="">
+            <a class="partners-link" href="">
               <img src="img/partner-4.png" alt="Логотип VIVE" width="260" height="100">
             </a>
           </li>
@@ -393,15 +394,15 @@
     <form class="mail-form" action="/" method="post">
       <div class="wrapper-mail-input">
         <label for="name-field">Ваше имя:</label>
-        <input class="input-name" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+        <input class="text-input" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
       </div>
       <div class="wrapper-mail-input">
         <label for="email-field">Ваш e-mail:</label>
-        <input class="input-email" type="email" name="email" id="email-field" placeholder="email@example.com">
+        <input class="text-input" type="email" name="email" id="email-field" placeholder="email@example.com">
       </div>
-      <div class="wrapper-mail-input">
+      <div class="wrapper-mail-textarea">
         <label for="message-field">Текст письма:</label>
-        <textarea name="message" id="message-field" placeholder="В свободной форме"></textarea>
+        <textarea class="message-textarea" name="message" id="message-field" placeholder="В свободной форме"></textarea>
       </div>
       <button class="btn" type="submit">Отправить</button>
     </form>
@@ -411,12 +412,12 @@
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2249.112548877992!2d37.527429315392446!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1602079839865!5m2!1sru!2sru"
-      width="960" height="550" allowfullscreen title="Офис компании по адресу ул. Строителей 15, Москва"></iframe>
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1253059734236!2d37.528586280322806!3d55.68680918273335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1603999260567!5m2!1sru!2sru"
+      width="960" height="560" allowfullscreen title="Офис компании по адресу ул. Строителей 15, Москва"></iframe>
     <button class="modal-close" aria-label="Закрыть" type="button"></button>
   </section>
 
-  <script src="js/login.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 

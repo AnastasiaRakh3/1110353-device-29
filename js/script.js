@@ -2,8 +2,8 @@ const mailBtn = document.querySelector(".btn-text-us");
 const mailPopup = document.querySelector(".modal-mail");
 const mailForm = mailPopup.querySelector(".mail-form");
 const mailClose = mailPopup.querySelector(".modal-close");
-const mailName = mailPopup.querySelector(".input-name");
-const mailEmail = mailPopup.querySelector(".input-email");
+const mailName = mailPopup.querySelector("[name=name]");
+const mailEmail = mailPopup.querySelector("[name=email]");
 
 let isStorageSupport = true;
 let storage = "";
