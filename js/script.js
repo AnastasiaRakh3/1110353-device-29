@@ -50,11 +50,14 @@ mailForm.addEventListener("submit", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (mailPopup.classList.contains("modal-show")||mapPopup.classList.contains("modal-show")) {
+    if (
+      mailPopup.classList.contains("modal-show") ||
+      mapPopup.classList.contains("modal-show")
+    ) {
       evt.preventDefault();
       mailPopup.classList.remove("modal-show");
       mailPopup.classList.remove("modal-error");
-      mapPopup.classList.remove("modal-show")
+      mapPopup.classList.remove("modal-show");
     }
   }
 });
@@ -64,8 +67,7 @@ mapImg.addEventListener("click", function (evt) {
   mapPopup.classList.add("modal-show");
 });
 
-mapClose.addEventListener('click', function(evt){
+mapClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapPopup.classList.remove("modal-show");
-
 });
