@@ -1,9 +1,13 @@
 const mailBtn = document.querySelector(".btn-text-us");
 const mailPopup = document.querySelector(".modal-mail");
+const mailClose = mailPopup.querySelector(".modal-close-mail");
 const mailForm = mailPopup.querySelector(".mail-form");
-const mailClose = mailPopup.querySelector(".modal-close");
 const mailName = mailPopup.querySelector("[name=name]");
 const mailEmail = mailPopup.querySelector("[name=email]");
+
+const mapImg = document.querySelector(".contacts-map");
+const mapPopup = document.querySelector(".modal-map");
+const mapClose = mapPopup.querySelector(".modal-close-map");
 
 let isStorageSupport = true;
 let storage = "";
@@ -46,10 +50,22 @@ mailForm.addEventListener("submit", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (mailPopup.classList.contains("modal-show")) {
+    if (mailPopup.classList.contains("modal-show")||mapPopup.classList.contains("modal-show")) {
       evt.preventDefault();
       mailPopup.classList.remove("modal-show");
       mailPopup.classList.remove("modal-error");
+      mapPopup.classList.remove("modal-show")
     }
   }
+});
+
+mapImg.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("modal-show");
+});
+
+mapClose.addEventListener('click', function(evt){
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
+
 });
