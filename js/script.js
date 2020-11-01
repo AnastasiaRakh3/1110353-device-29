@@ -9,6 +9,11 @@ const mapImg = document.querySelector(".contacts-map");
 const mapPopup = document.querySelector(".modal-map");
 const mapClose = mapPopup.querySelector(".modal-close-map");
 
+const sliderControls = document.querySelectorAll(".slider-control");
+const slides = document.querySelectorAll(".slide");
+const serviceLinks = document.querySelectorAll(".service-link");
+const serviceBlocks = document.querySelectorAll(".service-block");
+
 let isStorageSupport = true;
 let storage = "";
 
@@ -71,3 +76,14 @@ mapClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapPopup.classList.remove("modal-show");
 });
+
+var showSlide = function (sliderControl, slide) {
+  sliderControl.addEventListener("click", function () {
+    slide.classList.add("slide-current");
+    sliderControl.classList.add("slider-control-active");
+  });
+};
+
+for (var i = 0; i < sliderControls.length; i++) {
+  showSlide(sliderControls[i], slides[i]);
+}

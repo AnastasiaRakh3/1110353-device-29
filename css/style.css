@@ -1668,7 +1668,7 @@ img {
   height: 20px;
   background-repeat: no-repeat;
   background-position: 0 0;
-  border: 2px solid #000000;
+  border: 2px solid var(--basic-black);
   transform: translate(0, -50%);
 }
 
