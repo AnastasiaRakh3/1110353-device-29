@@ -14,6 +14,11 @@ const slides = document.querySelectorAll(".slide");
 const serviceLinks = document.querySelectorAll(".service-link");
 const serviceBlocks = document.querySelectorAll(".service-block");
 
+let lastActiveControl = document.querySelector(".slider-control-active");
+let lastActiveSlide = document.querySelector(".slide-current");
+let lastActiveLink = document.querySelector(".service-link-active");
+let lastActiveBlock = document.querySelector(".service-block-current");
+
 let isStorageSupport = true;
 let storage = "";
 
@@ -77,13 +82,33 @@ mapClose.addEventListener("click", function (evt) {
   mapPopup.classList.remove("modal-show");
 });
 
-var showSlide = function (sliderControl, slide) {
+const showSlide = function (sliderControl, slide) {
   sliderControl.addEventListener("click", function () {
-    slide.classList.add("slide-current");
+    lastActiveControl.classList.remove("slider-control-active");
     sliderControl.classList.add("slider-control-active");
+    lastActiveControl = sliderControl;
+    lastActiveSlide.classList.remove("slide-current");
+    slide.classList.add("slide-current");
+    lastActiveSlide = slide;
   });
 };
 
-for (var i = 0; i < sliderControls.length; i++) {
+for (let i = 0; i < sliderControls.length; i++) {
   showSlide(sliderControls[i], slides[i]);
+}
+
+const showService = function (serviceLink, serviceBlock) {
+  serviceLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    lastActiveLink.classList.remove("service-link-active");
+    serviceLink.classList.add("service-link-active");
+    lastActiveLink = serviceLink;
+    lastActiveBlock.classList.remove("service-block-current");
+    serviceBlock.classList.add("service-block-current");
+    lastActiveBlock = serviceBlock;
+  });
+};
+
+for (let i = 0; i < serviceLinks.length; i++) {
+  showService(serviceLinks[i], serviceBlocks[i]);
 }
