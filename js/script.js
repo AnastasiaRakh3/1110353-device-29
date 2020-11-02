@@ -14,6 +14,11 @@ const slides = document.querySelectorAll(".slide");
 const serviceLinks = document.querySelectorAll(".service-link");
 const serviceBlocks = document.querySelectorAll(".service-block");
 
+let lastActiveControl = document.querySelector(".slider-control-active");
+let lastActiveSlide = document.querySelector(".slide-current");
+let lastActiveLink = document.querySelector(".service-link-active");
+let lastActiveBlock = document.querySelector(".service-block-current");
+
 let isStorageSupport = true;
 let storage = "";
 
@@ -79,12 +84,12 @@ mapClose.addEventListener("click", function (evt) {
 
 const showSlide = function (sliderControl, slide) {
   sliderControl.addEventListener("click", function () {
-    const ActiveControl = document.querySelector(".slider-control-active");
-    const ActiveSlide = document.querySelector(".slide-current");
-    ActiveControl.classList.remove("slider-control-active");
+    lastActiveControl.classList.remove("slider-control-active");
     sliderControl.classList.add("slider-control-active");
-    ActiveSlide.classList.remove("slide-current");
+    lastActiveControl = sliderControl;
+    lastActiveSlide.classList.remove("slide-current");
     slide.classList.add("slide-current");
+    lastActiveSlide = slide;
   });
 };
 
@@ -95,12 +100,12 @@ for (let i = 0; i < sliderControls.length; i++) {
 const showService = function (serviceLink, serviceBlock) {
   serviceLink.addEventListener("click", function (evt) {
     evt.preventDefault();
-    const ActiveLink = document.querySelector(".service-link-active");
-    const ActiveBlock = document.querySelector(".service-block-current");
-    ActiveLink.classList.remove("service-link-active");
+    lastActiveLink.classList.remove("service-link-active");
     serviceLink.classList.add("service-link-active");
-    ActiveBlock.classList.remove("service-block-current");
+    lastActiveLink = serviceLink;
+    lastActiveBlock.classList.remove("service-block-current");
     serviceBlock.classList.add("service-block-current");
+    lastActiveBlock = serviceBlock;
   });
 };
 
