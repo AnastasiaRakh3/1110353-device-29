@@ -5,7 +5,7 @@
   font-style: normal;
   font-weight: 300;
   src: local("Gilroy"),
-  url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff2") format("woff2"),
     url("../fonts/gilroylight.woff") format("woff");
 }
 
@@ -14,7 +14,7 @@
   font-style: normal;
   font-weight: 800;
   src: local("Gilroy"),
-  url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff2") format("woff2"),
     url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans"),
-  url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff2") format("woff2"),
     url("../fonts/opensans.woff") format("woff");
 }
 
@@ -32,7 +32,7 @@
   font-style: normal;
   font-weight: 300;
   src: local("Open Sans"),
-  url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff2") format("woff2"),
     url("../fonts/opensanslight.woff") format("woff");
 }
 
@@ -47,7 +47,6 @@
   --basic-black02: rgba(0, 0, 0, 0.2);
   --basic-black018: rgba(0, 0, 0, 0.18);
   --basic-black01: rgba(0, 0, 0, 0.1);
-
   --basic-dark: #363636;
   --basic-grey: #e5e5e5;
   --basic-grey-dark: #dcdcdc;
@@ -69,13 +68,18 @@
   --basic-white03: rgba(255, 255, 255, 0.3);
 }
 
-/* Global */
+/* Global */ /* Grid */
 
 .page {
+  height: 100%;
   overflow-x: hidden;
 }
 
 .body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   min-width: 1160px;
   margin: 0;
   padding: 0;
@@ -94,19 +98,6 @@
 img {
   max-width: 100%;
   height: auto;
-}
-
-/* Grid */
-
-.page {
-  height: 100%;
-}
-
-.body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
 }
 
 /* Button */
@@ -151,8 +142,6 @@ img {
 .container {
   width: 1160px;
   margin: 0 auto;
-  padding-right: 40px;
-  padding-left: 40px;
 }
 
 /* Visually-hidden */
@@ -315,7 +304,7 @@ img {
 }
 
 .header-compare-link {
-  padding-left: 26x;
+  padding-left: 26px;
 }
 
 .header-cart-link {
@@ -493,13 +482,13 @@ img {
 .slide {
   display: none;
   grid-template-columns: 580px 580px;
-   background-image: linear-gradient(
+  background-image: linear-gradient(
     to bottom,
     var(--basic-yellow) 113px,
     transparent 113px
   );
-
 }
+
 .slide-current {
   display: grid;
 }
@@ -507,6 +496,7 @@ img {
 .slide-img-wrapper {
   padding-left: 30px;
 }
+
 .slide img {
   display: block;
 }
@@ -638,7 +628,7 @@ img {
   width: 12px;
   height: 12px;
   background-color: transparent;
-  border: solid 1px var(--basic-black);
+  border: 1px solid var(--basic-black);
   border-radius: 50%;
   box-sizing: border-box;
 }
@@ -654,7 +644,7 @@ img {
   left: 50%;
   width: 6px;
   height: 6px;
-  border: solid 1px var(--basic-black);
+  border: 1px solid var(--basic-black);
   border-radius: 50%;
   box-sizing: border-box;
   transform: translate(-50%, -50%);
@@ -682,6 +672,7 @@ img {
 .categories-item {
   margin-bottom: 20px;
 }
+
 .categories-img-wrapper {
   display: flex;
   width: 160px;
@@ -694,16 +685,16 @@ img {
   margin: auto;
 }
 
-.categories-item:nth-child(2) img{
+.categories-item:nth-child(2) img {
   margin-top: 26px;
 }
 
-.categories-item:nth-child(3) img{
+.categories-item:nth-child(3) img {
   margin-bottom: 37px;
 }
 
-.categories-item:nth-child(4) img{
-  margin-left:27px;
+.categories-item:nth-child(4) img {
+  margin-left: 27px;
 }
 
 .categories-link:hover .categories-img-wrapper {
@@ -719,7 +710,7 @@ img {
 }
 
 .categories-name {
-  margin:0;
+  margin: 0;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -727,9 +718,11 @@ img {
   letter-spacing: 0.05em;
   color: var(--basic-black);
 }
+
 .categories-item:nth-child(4) .categories-name {
   letter-spacing: normal;
 }
+
 .categories-link:active .categories-name {
   color: var(--basic-black03);
 }
@@ -918,11 +911,14 @@ img {
   min-width: 260px;
   margin-bottom: 38px;
 }
-.review, .contacts {
+
+.review,
+.contacts {
   position: relative;
   padding-top: 57px;
   padding-bottom: 40px;
 }
+
 .review::before,
 .contacts::before {
   content: "";
@@ -982,14 +978,16 @@ img {
   left: 0;
   width: 4px;
   height: 4px;
-  border:2px solid var(--basic-grey);
+  border: 2px solid var(--basic-grey);
   border-radius: 50%;
 }
+
 .review .btn {
   text-align: start;
   padding-left: 24px;
   padding-right: 10px;
 }
+
 /* Contacts */
 
 .contacts {
@@ -1026,9 +1024,9 @@ img {
 }
 
 .footer-logo {
-  width:163px;
+  width: 163px;
   height: 35px;
- margin-top: 44px;
+  margin-top: 44px;
 }
 
 .footer-logo:hover,
@@ -1067,11 +1065,11 @@ img {
   color: var(--basic-white07);
 }
 
-.footer-menu-item:nth-child(2) .footer-menu-link{
+.footer-menu-item:nth-child(2) .footer-menu-link {
   padding-left: 25px;
 }
 
-.footer-menu-item:nth-child(3) .footer-menu-link{
+.footer-menu-item:nth-child(3) .footer-menu-link {
   padding-left: 22px;
 }
 
@@ -1243,6 +1241,7 @@ img {
 .socials-btn:active {
   opacity: 0.1;
 }
+
 .copyright {
   width: 27px;
   height: 34px;
@@ -1286,6 +1285,7 @@ img {
   background-color: var(--basic-yellow-dark);
   opacity: 0.3;
 }
+
 .modal-mail {
   z-index: 2;
   display: none;
@@ -1299,8 +1299,7 @@ img {
 }
 
 .wrapper-mail-input,
-.wrapper-mail-textarea
-{
+.wrapper-mail-textarea {
   display: flex;
   flex-direction: column;
   margin-bottom: 33px;
@@ -1394,6 +1393,7 @@ img {
   display: block;
   animation: bounce 0.6s;
 }
+
 .modal-error {
   animation: shake 0.6s;
 }
@@ -1455,7 +1455,7 @@ img {
   background-image: url("../img/icon-arrow.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
 }
 
 .breadcrumbs-item:last-child::after {
@@ -1647,12 +1647,6 @@ img {
   margin-bottom: 0px;
 }
 
-.filter-bluetooth label {
-  margin-bottom: 21px;
-  padding-left: 40px;
-}
-
-
 .filter-color input:disabled + label,
 .filter-bluetooth input:disabled + label {
   color: var(--basic-grey-darker);
@@ -1725,6 +1719,7 @@ img {
 }
 
 .filter-bluetooth label {
+  padding-left: 40px;
   margin-bottom: 16px;
 }
 
@@ -2007,9 +2002,11 @@ img {
   text-transform: uppercase;
   color: var(--basic-black);
 }
-.pagination-button-back{
+
+.pagination-button-back {
   padding-left: 30px;
 }
+
 .pagination-button-next {
   padding-right: 28px;
   text-align: end;
@@ -2059,25 +2056,22 @@ img {
   0% {
     transform: translateY(-2000px);
   }
-
   70% {
     transform: translateY(30px);
   }
-
   90% {
     transform: translateY(-10px);
   }
-
   100% {
     transform: translateY(0);
   }
 }
+
 @keyframes shake {
   0%,
   100% {
     transform: translateX(0);
   }
-
   10%,
   30%,
   50%,
@@ -2085,7 +2079,6 @@ img {
   90% {
     transform: translateX(-10px);
   }
-
   20%,
   40%,
   60%,
@@ -2093,4 +2086,3 @@ img {
     transform: translateX(10px);
   }
 }
-
