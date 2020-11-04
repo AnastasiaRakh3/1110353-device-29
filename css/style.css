@@ -115,6 +115,7 @@ img {
   letter-spacing: 0.2em;
   color: var(--basic-black);
   text-align: center;
+  vertical-align: middle;
   background-color: transparent;
   background-image: linear-gradient(
     to bottom,
@@ -273,14 +274,15 @@ img {
 .header-menu {
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
+  width: 544px;
   margin: 0;
+  margin-right: -44px;
   padding: 0;
   list-style: none;
 }
 
 .header-menu-item {
-  margin-left: 43px;
+  margin-right: 44px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -288,7 +290,6 @@ img {
 .header-menu-item:first-child {
   display: flex;
   margin-right: auto;
-  margin-left: 0;
 }
 
 .header-menu-link {
@@ -467,7 +468,7 @@ img {
 /* Slider */
 
 .slider {
-  margin-bottom: 74px;
+  margin-bottom: 76px;
 }
 
 .slider .container {
@@ -617,7 +618,7 @@ img {
 .slider-controls {
   position: absolute;
   top: 325px;
-  right: 128px;
+  right: 88px;
   z-index: 1;
   display: flex;
   justify-content: space-between;
@@ -654,7 +655,7 @@ img {
 /* Categories */
 
 .categories {
-  margin-bottom: 49px;
+  margin-bottom: 50px;
 }
 
 .categories-wrapper {
@@ -731,7 +732,7 @@ img {
 /* Service */
 
 .service {
-  margin-bottom: 89px;
+  margin-bottom: 90px;
   background-image: linear-gradient(
     to bottom,
     transparent 115px,
@@ -863,7 +864,6 @@ img {
 .partners-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -910,7 +910,7 @@ img {
 
 .index-columns .btn {
   min-width: 260px;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 }
 
 .review,
@@ -1043,21 +1043,20 @@ img {
 .footer-menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
   width: 580px;
   margin: 0;
   margin-top: 26px;
+  margin-right: -41px;
   padding: 0;
   line-height: 20px;
   list-style: none;
 }
 
-.footer-menu-item {
-  margin-left: 41px;
+.footer-menu-item:first-child {
+  margin-left: auto;
 }
-
-.footer-menu-item:nth-child(3) {
-  margin-left: 42px;
+.footer-menu-item {
+  margin-right: 41px;
 }
 
 .footer-menu-link {
@@ -1134,7 +1133,6 @@ img {
 
 .footer-nav {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   width: 423px;
   margin: 0;
@@ -1144,7 +1142,12 @@ img {
 
 .footer-nav-item {
   margin-top: 5px;
+  margin-right: 36px;
   margin-bottom: 5px;
+}
+
+.footer-nav-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .footer-nav-link {
@@ -1636,11 +1639,15 @@ img {
 .filter-color label,
 .filter-bluetooth label {
   position: relative;
-  display: block;
   margin-bottom: 16px;
   padding-left: 42px;
   font-size: 14px;
   line-height: 24px;
+}
+
+.filter-color label {
+  display: flex;
+  align-items: center;
 }
 
 .filter-color label:last-child,
@@ -1657,14 +1664,12 @@ img {
 .filter-bluetooth label::before {
   content: "";
   position: absolute;
-  top: 50%;
   left: 0;
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
   background-position: 0 0;
   border: 2px solid var(--basic-black);
-  transform: translate(0, -50%);
 }
 
 .filter-color label::before {
@@ -1675,16 +1680,14 @@ img {
 .filter-bluetooth input:checked + label::after {
   content: "";
   position: absolute;
-  top: 50%;
+  left: 0;
   background-repeat: no-repeat;
-  background-position: 0 0;
-  transform: translate(0, -50%);
+  background-position: center;
 }
 
 .filter-color input:checked + label::after {
-  left: 5px;
-  width: 14px;
-  height: 11px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/checkbox-yes.svg");
 }
 
@@ -1720,6 +1723,7 @@ img {
 }
 
 .filter-bluetooth label {
+  display: block;
   padding-left: 40px;
   margin-bottom: 16px;
 }
@@ -1729,6 +1733,7 @@ img {
 }
 
 .filter-bluetooth input:checked + label::after {
+  top: 8px;
   left: 8px;
   width: 8px;
   height: 8px;
@@ -1817,6 +1822,7 @@ img {
 
 .sorting-button {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .sorting-button:first-child {
@@ -1827,6 +1833,7 @@ img {
   display: inline-block;
   width: 18px;
   height: 18px;
+  vertical-align: middle;
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.2;
