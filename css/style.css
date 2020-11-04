@@ -417,6 +417,7 @@ img {
 .nav-item:first-child:focus-within .nav-inserted-list {
   display: grid;
 }
+
 .nav-inserted-item {
   line-height: 20px;
 }
